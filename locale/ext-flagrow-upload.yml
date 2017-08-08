@@ -1,0 +1,104 @@
+flagrow-upload:
+    forum:
+        buttons:
+            #attach: Attach
+            attach: Lampiran
+        states:
+            loading: Loading
+            #success: Success
+            success: Sukses
+            error: Error
+    admin:
+        permissions:
+            #upload_label: Upload files
+            upload_label: Upload file
+            download_label: Download files
+        upload_methods:
+            #local: Local
+            local: Lokal
+            aws-s3: Amazon S3
+            imgur: Imgur
+            ovh-svfs: OVH SVFS
+        labels:
+            preferences:
+                #title: General preferences
+                title: Preferensi umum
+                #max_file_size: Maximum file size (in kilobytes)
+                max_file_size: Maksimum ukuran file (kilobytes)
+                #mime_types: Configure your mime type, upload adapter mapping
+                mime_types: Konfigurasikan jenis mime Anda, upload adapter mapping
+            resize:
+                #title: Image resize
+                title: Mengubah Ukuran Gambar
+                #toggle: Resize images
+                toggle: Ubah ukuran
+                #max_width: Maximum image width
+                max_width: Lebar maksimum
+                #max_height: Maximum image height
+                max_height: Tinggi maksimum
+            watermark:
+                #title: Watermark images
+                title: Pemberian Watermark Pada Gambar
+                #toggle: Watermark images
+                toggle: Berikan watermark
+                #position: Watermark position
+                position: Posisi Watermark
+                #file: Upload your watermark image
+                file: Upload watermark image Anda
+            local:
+                #title: Local storage settings
+                title: Pengaturan Local storage
+                cdn_url: Content Delivery URL (prefixes files)
+            imgur:
+                #title: Imgur image storage settings
+                title: Pengaturan Imgur image storage
+                client_id: Imgur client ID
+            aws-s3:
+                #title: AWS S3 storage settings
+                title: Pengaturan AWS S3 storage
+                key: Key
+                secret: Secret
+                bucket: Bucket
+                region: Region
+            ovh-svfs:
+                #title: OVH SVFS storage settings
+                title: Pengaturan OVH SVFS storage
+                container: Container
+                tenantid: Tenant ID
+                username: Username
+                password: Password
+                region: Region
+            disable-hotlink-protection:
+                #title: Disable hotlink protection
+                title: Nonaktifkan hotlink protection
+                #toggle: Disable
+                toggle: Nonaktifkan
+            disable-download-logging:
+                #title: Disable logging downloads
+                title: Nonaktifkan log download
+                #toggle: Disable
+                toggle: Nonaktifkan
+
+        buttons:
+            #save: Save settings
+            save: Simpan
+        help_texts:
+            description: >
+                Mengatur layanan dan preferensi upload.
+            mime_types: >
+                Konfigurasikan pemetaan Anda di sini.
+                Setiap jenis mime secara reguler akan ditangani oleh adaptor upload tertentu.
+            resize: >
+                Pilih apapun untuk merubah ukuran gambar sebelum diunggah.
+                Anda dapat menggunakan panjang maksimal dan tinggi, dalam pixel.
+                Pengubahan ukuran gambar ini tetap menjaga aspek rasio dari gambar.
+            watermark: >
+                Pilih gambar apapun yang akan dijadikan watermark saat gambar diunggah.
+                Watermark ditambahkan ke non-gif berdasarkan preferensi Anda di bawah ini.
+            disable-hotlink-protection: >
+                Perlindungan hotlink mencegah download dari situs lain.
+                Metode saat ini membutuhkan token csrf dan id post.
+            disable-download-logging: >
+                Nonaktifkan log setiap download yang dilakukan oleh user forum Anda.
+                Dengan mengaktifkannya memungkinkan Anda melihat jumlah download dan metrik lainnya
+                dalam waktu dekat.
