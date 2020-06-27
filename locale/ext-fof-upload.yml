@@ -1,0 +1,116 @@
+fof-upload:
+  admin:
+    buttons:
+      # save: Save settings
+      save: Simpan pengaturan
+    help_texts:
+      description: |
+        Siapkan layanan dan preferensi upload.
+      disable-download-logging: |
+        Nonaktifkan pencatatan setiap download yang dilakukan oleh user forum Anda. Dengan tetap mengaktifkannya, Anda dapat melihat jumlah download dan metrik lainnya di waktu dekat.
+      disable-hotlink-protection: |
+        Hotlink protection mencegah seseorang download dari situs lain. Metode saat ini membutuhkan csrf token dan post id.
+      download_templates: |
+        Template download adalah cara peng-upload-an ditampilkan di forum Anda, mis. Seperti pratinjau, tombol. Saat ini tersedia:
+      mime_types: |
+        Harap konfigurasikan mapping Anda di sini. Setiap regular expression tipe mime akan ditangani oleh upload adapter dan template download tertentu.
+      resize: |
+        Pilih apakah Anda ingin mengubah ukuran gambar sebelum di-upload. Anda dapat memilih lebar dan tinggi maksimum, dalam piksel. Proses pengubahan ukuran menjaga rasio aspek gambar.
+      watermark: |
+        Pilih apakah gambar akan memiliki watermark yang ditambahkan selama proses upload. Watermark ditambahkan ke non-gif berdasarkan preferensi Anda di bawah ini.
+    labels:
+      aws-s3:
+        bucket: Bucket
+        key: Key
+        region: Region
+        secret: Secret
+        # title: AWS S3 storage settings
+        title: Pengaturan AWS S3 storage
+      disable-download-logging:
+        # title: Disable logging downloads
+        title: Nonaktifkan pencatatan download
+        # toggle: Disable
+        toggle: Nonaktifkan
+      disable-hotlink-protection:
+        # title: Disable hotlink protection
+        title: Nonaktifkan hotlink protection
+        # toggle: Disable
+        toggle: Nonaktifkan
+      imgur:
+        client_id: Imgur client ID
+        # title: Imgur image storage settings
+        title: Pengaturan Imgur image storage
+      local:
+        cdn_url: Content Delivery URL (prefixes files)
+        # title: Local storage settings
+        title: Pengaturan local storage
+      qiniu:
+        # title: Qiniu storage settings
+        title: Pengaturan Qiniu storage
+        key: Key
+        secret: Secret
+        bucket: Bucket
+      preferences:
+        # max_file_size: Maximum file size (in kilobytes)
+        max_file_size: Ukuran file maksimum (dalam kilobytes)
+        # mime_types: 'Configure your mime type, upload adapter mapping'
+        mime_types: 'Konfigurasikan tipe mime Anda, upload adapter mapping'
+        # title: General preferences
+        title: Preferensi umum
+      resize:
+        # max_width: Maximum image width
+        max_width: Lebar maksimum
+        # title: Image resize
+        title: Ubah ukuran
+        # toggle: Resize images
+        toggle: Ubah ukuran
+      watermark:
+        # file: Upload your watermark image
+        file: Upload watermark Anda
+        # position: Watermark position
+        position: Posisi Watermark
+        # title: Watermark images
+        title: Watermark
+        # toggle: Watermark images
+        toggle: Watermark
+    permissions:
+      # download_label: Download files
+      download_label: Download file
+      # upload_label: Upload files
+      upload_label: Upload file
+    templates:
+      # file: Default file download template
+      file: Template download file default
+      file_description: |
+        Memperlihatkan nama file dan beberapa informasi umum. Proxies download melalui php, memungkinkan pengumpulan statistik dan hotlink protection.
+      # image: Default image download template
+      image: Template download gambar default
+      # image-preview: Complete image preview template
+      image-preview: Template pratinjau gambar yang lengkap
+      image-preview_description: |
+        Memperlihatkan gambar lengkap in-line. Tidak ada fungsi download, tidak ada statistik yang dikumpulkan dan hotlink protection diabaikan.
+      image_description: |
+        Memperlihatkan thumbnail gambar dan proxies download melalui php. Mengizinkan statistik dikumpulkan dan hotlink protection.
+    upload_methods:
+      aws-s3: Amazon S3
+      imgur: Imgur
+      local: Local
+      ovh-svfs: OVH SVFS
+      qiniu: QiNiu
+  forum:
+    buttons:
+      # attach: Attach
+      attach: Lampiran
+    states:
+      error: Error
+      loading: Uploading
+      # unauthorized: You are not allowed to download files
+      unauthorized: Anda tidak diizinkan untuk men-download file ini
+  api:
+    upload_errors:
+      # forbidden_type: Uploading files of this type is not allowed.
+      forbidden_type: Meng-upload file jenis ini tidak diizinkan.
+      # unsupported_type: 'Upload adapter does not support the provided mime type: {mime}.'
+      unsupported_type: 'Upload adapter tidak mendukung tipe file yang disediakan: {mime}.'
+      # could_not_detect_mime: Could not detect the MIME type of this file, please try again.
+      could_not_detect_mime: Tidak dapat mendeteksi tipe MIME dari file ini, silakan coba lagi.
