@@ -1,0 +1,44 @@
+fof-analytics:
+    admin:
+        popup:
+            section:
+                googleAnalytics: Google Analytics
+                piwik: Piwik
+
+            field:
+                # statusGoogle: Enable Google Analytics
+                statusGoogle: Aktifkan Google Analytics
+                # optTrackingCode: Optimize Tracking Code (optional)
+                optTrackingCode: Optimalkan Kode Pelacakan (opsional)
+                # googleTrackingCode: Tracking Code ID
+                googleTrackingCode: Kode ID Tracking
+                googleGTMCode: GTM code ID (optional)
+                # statusPiwik: Enable Piwik
+                statusPiwik: Aktifkan Piwik
+                # piwikUrl: Piwik domain or URL
+                piwikUrl: Domain Piwik atau URL
+                piwikSiteId: Site ID
+                # piwikTrackSubdomain: Track visitors across all subdomains of Flarum
+                piwikTrackSubdomain: Tracking pengunjung di semua subdomain Flarum
+                # piwikPrependDomain: Prepend the site domain to the page title when tracking
+                piwikPrependDomain: Tambahkan domain situs ke judul halaman saat men-tracking
+                # piwikHideAliasUrl: In the "Outlinks" report, hide clicks to known alias URLs
+                piwikHideAliasUrl: Dalam laporan "Link keluar", sembunyikan klik ke URL alias yang dikenal
+                piwikAliasUrl: Alias URL
+                # piwikTrackAccounts: Track individual user accounts
+                piwikTrackAccounts: Tracking setiap akun user
+                # piwikAuthToken: Authentication Token
+                piwikAuthToken: Token Otentikasi
+
+            placeholder:
+                piwikAuthToken: |
+                    Isi token ini untuk mengaktifkan tab Piwik stats di panel admin.
+                    Anda dapat menemukannya di Settings > Personal > API Authentication Token.
+
+            trackAccounts:
+                # none: Do not track
+                none: Jangan ditracking
+                # username: Track by username
+                username: Tracking dengan username
+                # email: Track by email
+                email: Tracking dengan email
